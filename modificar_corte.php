@@ -21,14 +21,14 @@ if(isset($_SESSION["usuario"]))
     </head>
     <body>
        
-        <!--aqui debe ir la barra de navegación -->
+        <!--aqui debe ir la barra de navegación includia con cofigo php-->
         <?php
             include("encabezado.php");
         ?>
 
         <section class="container m-5 bg-light">
 
-           <!--registro de platillos-->
+           <!--registro de cortes-->
            <div class="row">
                 
                 <div class="col-lg-8">
@@ -119,7 +119,7 @@ if(isset($_SESSION["usuario"]))
 }
 else
 {
-    //de no haber iniciado sesio regresa al login.php
+    //de no haber iniciado sesion nos regresa al login.php esto como un metodo de seguridad
     header("Location: login.php");
 }
 

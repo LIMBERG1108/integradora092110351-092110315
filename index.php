@@ -9,7 +9,7 @@ if(isset($_SESSION["usuario"]))
     //cerrar codigo php
 ?>
 
-
+<!-- este codigo lo anexamo con el proposito de que al acceder de modo local lo que nos aparezca sea directamente el login-->
 
 <?php
 }

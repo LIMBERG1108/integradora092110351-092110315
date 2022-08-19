@@ -1,5 +1,5 @@
 <?php
-
+//otorgamos los datos de la base de datos de nuestro localhost
 $servidor="localhost";
 $usuario="root";
 $password="";
@@ -15,7 +15,7 @@ if(!$conn)
 
 }
 
-//echo "Conexion realizada correctamente";
+//echo "Conexion realizada correctamente"; este comando se usa para hacer la prueba 
 
 
 ?>

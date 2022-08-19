@@ -1,8 +1,8 @@
 <?php
-//traer o recolectar las variables de sesion que ya existe
+//llamamos las variables de sesion que ya existen
 session_start();
 
-//destruir las variables de sesión.
+//destruimos las variables de sesines.
 session_destroy();
 
 header("Location: login.php");

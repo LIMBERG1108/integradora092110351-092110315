@@ -23,7 +23,7 @@ if(isset($_SESSION["usuario"]))
     </head>
     <body>
        
-        <!--aqui debe ir la barra de navegación -->
+        <!--aqui debe ir la barra de navegación llamandolo con codigo php -->
         <?php
             include("encabezado.php");
         ?>
@@ -32,7 +32,7 @@ if(isset($_SESSION["usuario"]))
 
         <section class="container m-5 bg-light">
 
-           <!--registro de platillos-->
+           <!--registro de cortes-->
            <div class="row">
                 
                 <div class="col-lg-8">
@@ -43,7 +43,7 @@ if(isset($_SESSION["usuario"]))
                         <input class="form-control" type="search" name="condicion" placeholder="Busqueda por descripción">
                     </form>
                  
-                    <!--tabla con los platillos disponibles-->
+                    <!--tabla con los cortes disponibles-->
                     <table class="table">
                         <tr>
                             <td>Código</td>
@@ -90,15 +90,14 @@ if(isset($_SESSION["usuario"]))
                                     echo "<td>".$fila['descripcion']."</td>";
                                     echo "<td>".$fila['precio']."</td>";
                                     echo "<td>".$fila['observaciones']."</td>";
-                                    //echo "<td> <a class='btn btn-danger' href='eliminar_platillo.php?codigo=".$fila['codigo']."'>Eliminar</a> </td>";
-                                    //echo "<td><a class='btn btn-success' href='modificar_platillo.php?codigo=".$fila['codigo']."&descripcion=".$fila['descripcion']."&precio=".$fila['precio']."&observaciones=".$fila['observaciones']."'>Modificar</a></td>";
+                                    
 
                                     //parte modificada
                                     if($_SESSION["tipo"]==1) {
                                         echo "<td> <a class='btn btn-danger' href='eliminar_corte.php?codigo=".$fila['codigo']."'>eliminar</a> </td>";
                                         echo "<td> <a class='btn btn-success' href='modificar_corte.php?codigo=".$fila['codigo']."&descripcion=".$fila['descripcion']."&precio=".$fila['precio']."&observaciones=".$fila['observaciones']."'>Modificar</a></td>";
                                     } else {
-                                        //invitado
+                                        
                                     }
 
                                 }

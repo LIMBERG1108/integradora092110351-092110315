@@ -28,7 +28,7 @@ if(isset($_SESSION["usuario"]))
 
         <section class="container m-5 bg-light">
 
-           <!--registro de platillos-->
+           <!--registro de cortes-->
            <div class="row">
                 
                 <div class="col-lg-8">

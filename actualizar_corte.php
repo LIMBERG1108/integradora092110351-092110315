@@ -2,21 +2,22 @@
 
 //recibir las variables del formulario y actualizar
 
-//echo "Aca voy a actualizar los datos";
+//actualizacion de los datos
 $codigo=$_POST["codigo"];
 $descripcion=$_POST["descripcion"];
 $precio=$_POST["precio"];
 $observaciones=$_POST["observaciones"];
-//echo "valor del codigo".$codigo;
 
-//llamar al archivo conexión
+
+//llamamos al archivo conexion de nuestra base de datos
 include("conexion.php");
 
+//incluimos una consulta que nos permitira actualizar datos
 $sql = "UPDATE cortes SET descripcion='$descripcion', precio=$precio, observaciones='$observaciones' WHERE codigo='$codigo' ";
 
 echo "consulta: ".$sql;
 if (mysqli_query($conn, $sql)) {
-  //echo "Record updated successfully";
+  
   header("Location: cortes.php");
 } else {
   echo "Error al modificar un campo: " . mysqli_error($conn);

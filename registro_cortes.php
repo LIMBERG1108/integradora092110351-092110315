@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_SESSION["usuario"]))
 {
-    //muestra la página web index.php
+    //muestra la página web index.php que redirecciona al login.php
     //cerrar codigo php
 ?>
 <!--Aquí vamos a pegar todo el codigo HTML -->
